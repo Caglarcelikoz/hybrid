@@ -46,8 +46,7 @@ app.config(function($routeProvider) {
       }
     })
     .when('/admin/results', {
-      controller: 'resultsCtrl',
-      templateUrl: 'admin/results.html',
+      template: '<results all-tasks="$resolve.allTasks"></results>',
       controllerAs: 'vm',
       resolve: {
         admin: routeResolvers.requireAdmin,
