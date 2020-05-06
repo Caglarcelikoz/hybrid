@@ -54,9 +54,7 @@ app.config(function($routeProvider) {
       }
     })
     .when('/admin/users/:id', {
-      controller: 'userDetailsCtrl',
-      templateUrl: 'admin/userDetails.html',
-      controllerAs: 'vm',
+      template:'<user-details all-users="$resolve.allUsers"></user-details>',
       resolve: {
         admin: routeResolvers.requireAdmin,
         allUsers: routeResolvers.allUsers
@@ -72,17 +70,13 @@ app.config(function($routeProvider) {
       }
     })
     .when('/admin/createusers', {
-      controller: 'createUsersCtrl',
-      templateUrl: 'admin/createUsers.html',
-      controllerAs: 'vm',
+      template: '<create-users></create-users>',
       resolve:  {
         admin: routeResolvers.requireAdmin
       }
     })
     .when('/home', {
-      controller: 'homeCtrl',
-      templateUrl: 'home/home.html',
-      controllerAs: 'vm',
+      template: '<home user-sessions="$resolve.userSessions" user-tasks="$resolve.userTasks"></home>',
       resolve: {
         login:routeResolvers.loggedIn,
         userTasks: routeResolvers.userTasks,
@@ -98,25 +92,19 @@ app.config(function($routeProvider) {
       }
     })
     .when('/createsession', {
-      controller: 'createNewSessionCtrl',
-      templateUrl: 'home/createNewSession.html',
-      controllerAs: 'vm',
+      template: '<create-new-session user-sessions="$resolve.userSessions"></create-new-session>',
       resolve: {
         userSessions: routeResolvers.userSessions,
       }
     })
     .when('/createtask', {
-      controller: 'createNewTaskCtrl',
-      templateUrl: 'home/createNewTask.html',
-      controllerAs: 'vm',
+      template: '<create-new-task user-tasks="$resolve.userTasks"></create-new-task>',
       resolve: {
         userTasks: routeResolvers.userTasks,
       }
     })
     .when('/login', {
-      controller: 'loginCtrl',
-      templateUrl: 'security/login.html',
-      controllerAs: 'vm',
+      template: '<login></login>',
       resolve: {
         currentAuth: routeResolvers.waitForAuth
       }

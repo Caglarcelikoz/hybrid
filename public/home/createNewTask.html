@@ -5,23 +5,23 @@
 <form class="form">
   <div class="form-group">
     Title
-    <input required type="text" placeholder="Title" ng-model="vm.title" class="form-control">
+    <input required type="text" placeholder="Title" ng-model="$ctrl.title" class="form-control">
   </div>
   <div class="form-group">
     Estimated hours
     <input required type="number" placeholder="" 
-      ng-model="vm.estimated_hours" class="form-control" min="0" max="100">
+      ng-model="$ctrl.estimated_hours" class="form-control" min="0" max="100">
   </div>
  
   
   <div class="row">
     <div class="col-sm-3">
-      <button class=" btn btn-primary btn-sm" ng-click="vm.createTask()">Create</button>
+      <button class=" btn btn-primary btn-sm" ng-click="$ctrl.createTask()">Create</button>
     </div>
   </div>
 </form>
 
 <h2>Your Other Tasks</h2>
-<div ng-repeat="task in vm.userTasks | orderBy: '-id'">
+<div ng-repeat="task in $ctrl.userTasks | orderBy: '-id'">
   <task-detail task="task" initial-collapsed="false"></task-detail>
 </div>
