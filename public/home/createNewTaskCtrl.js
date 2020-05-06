@@ -15,6 +15,8 @@ angular.module('app').controller('createNewTaskCtrl',
     tasks.createNewTask(newUserTask).then(function(response) {
       console.log(response);
       this.userTasks.push(response.data);
+      this.title="";
+      this.estimated_hours="";
     }.bind(this))
 
   }
