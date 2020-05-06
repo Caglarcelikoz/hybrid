@@ -88,6 +88,7 @@ app.config(function($routeProvider) {
       resolve: {
         login:routeResolvers.loggedIn,
         userTasks: routeResolvers.userTasks,
+        userSessions: routeResolvers.userSessions
       }
     })
     .when('/profile', {
