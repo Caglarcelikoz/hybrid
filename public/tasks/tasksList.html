@@ -1,0 +1,22 @@
+<table class="table table-sm table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Estimated hours</th>
+      <th scope="col">Time taken</th>
+      <th scope="col">Assigned to</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="task in vm.tasks">
+      <th scope="row">{{task.id}}</th>
+      <td>{{task.title}}</td>
+      <td>{{task.estimated_hours}}</td>
+      <td>{{task.time_taken}}</td>
+      <td>{{task.assigned_to}}</td>
+      <td>{{task.status}}</td>
+    </tr>
+  </tbody>
+</table>
