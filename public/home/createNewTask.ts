@@ -1,5 +1,5 @@
 angular.module("app").component("createNewTask", {
-  templateUrl: "/home/createNewTask.html",
+  templateUrl: "./createNewTask.html",
   bindings: {
     userTasks: "="
   },

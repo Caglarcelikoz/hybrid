@@ -1,5 +1,5 @@
 angular.module("app").component("tasksList", {
-  templateUrl: "/tasks/tasksList.html",
+  templateUrl: "./tasksList.html",
   bindings: {
     tasks: "="
   },

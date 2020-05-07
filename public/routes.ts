@@ -1,4 +1,4 @@
-app.config(function($routeProvider) {
+angular.module('app').config(function($routeProvider) {
   var routeResolvers = {
     loggedIn: function(auth) {
       return auth.requireLogin();
@@ -59,9 +59,7 @@ app.config(function($routeProvider) {
       }
     })
     .when("/users", {
-      controller: "userListCtrl",
-      templateUrl: "admin/userlist.html",
-      controllerAs: "vm",
+      template: '<user-list all-users="$resolve.allUsers"></user-list>',
       resolve: {
         admin: routeResolvers.requireAdmin,
         allUsers: routeResolvers.allUsers
