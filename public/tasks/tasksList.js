@@ -1,12 +1,8 @@
-angular.module('app').directive('tasksList', function() {
-  return {
-    templateUrl: '/tasks/tasksList.html',
-    scope: {
-      tasks: '=',
+angular.module("app").component("tasksList", {
+    templateUrl: "/tasks/tasksList.html",
+    bindings: {
+        tasks: "="
     },
-    bindToController: true,
-    controllerAs: 'vm',
-    controller: function() {
-    }
-  }
-})
+    controller: function () { }
+});
+//# sourceMappingURL=tasksList.js.map

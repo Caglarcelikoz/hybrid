@@ -1,9 +1,7 @@
+describe("parseNames", function() {
+  beforeEach(module("app"));
 
-describe('parseNames', function() {
-  
-  beforeEach(module('app'))
-  
-  it('should parse names correctly', inject(function(parseNames) {
-    expect(parseNames('f@f.com|frank|furter')[0].firstName).toBe('frank');
-  }))
-})
+  it("should parse names correctly", inject(function(nameParser) {
+    expect(nameParser.parse("f@f.com|frank|furter")[0].firstName).toBe("frank");
+  }));
+});

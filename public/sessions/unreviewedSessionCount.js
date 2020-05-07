@@ -1,11 +1,17 @@
-angular.module('app').factory('unreviewedSessionCount', function(sessions, currentIdentity) {
-  return {
-    value: 0,
-    updateUnreviewedSessionCount: function() {
-      sessions.getUnreviewedCount(currentIdentity.currentUser.id)
-          .then(function(response) {
-        this.value = response.data.count;
-      }.bind(this))
+angular.module("app").service("unreviewedSessionCount", (function () {
+    function UnreviewedSessionCount(sessions, currentIdentity) {
+        this.value = 0;
+        this.sessions = sessions;
+        this.currentIdentity = currentIdentity;
     }
-  }
-})
+    UnreviewedSessionCount.prototype.updateUnreviewedSessionCount = function () {
+        var _this = this;
+        this.sessions
+            .getUnreviewedCount(this.currentIdentity.currentUser.id)
+            .then(function (response) {
+            _this.value = response.data.count;
+        });
+    };
+    return UnreviewedSessionCount;
+}()));
+//# sourceMappingURL=unreviewedSessionCount.js.map
