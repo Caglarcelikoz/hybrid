@@ -6,7 +6,6 @@
  import "./admin/createUsers";
  import "./admin/userList";
  import "./admin/userDetails";
- import "./admin/nameParser";
  import "./nav/nav";
  import "./security/logout";
  import "./security/login";
@@ -16,7 +15,6 @@
  import "./home/home";
  import "./home/createNewSession";
  import "./home/createNewTask";
- import "./home/unreviewedTalk";
  import "./sessions/sessions";
  import "./sessions/unreviewedSessionCount";
  import "./sessions/sessionDetail";

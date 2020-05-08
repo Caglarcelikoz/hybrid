@@ -12,7 +12,7 @@
     "tsc": "tsc -p . -w"
   },
   "keywords": [],
-  "author": "joe eames",
+  "author": "Caglar Celikoz",
   "license": "MIT",
   "dependencies": {
     "@angular/common": "4.3.0",

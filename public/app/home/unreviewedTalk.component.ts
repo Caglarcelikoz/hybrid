@@ -1,0 +1,22 @@
+import { Component, Input, Output, EventEmitter } from "@angular/core";
+
+  @Component({
+    selector:'unreviewed-talk',
+    templateUrl: "./unreviewedTalk.component.html"
+  })
+ 
+ export class unreviewedTalkComponent{
+
+    @Input() session: any;
+    @Output() voteYes =  new EventEmitter();
+    @Output() voteNo = new EventEmitter();
+    
+    yes() {
+      this.voteYes.emit(null);
+    }
+
+    no(){
+      this.voteNo.emit(null);
+    }
+  }
+
