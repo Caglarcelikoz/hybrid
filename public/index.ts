@@ -25,4 +25,3 @@
  import "./components/detailPanel";
  import "./components/talkDuration";
  import "./components/zoomIn";
- import "./profile/profile"

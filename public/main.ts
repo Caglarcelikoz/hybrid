@@ -3,6 +3,7 @@ import { UpgradeModule, downgradeInjectable, downgradeComponent } from "@angular
 import { AppModule } from "./app/app.module";
 import { NameParser } from "./app/admin/nameParser.service";
 import { unreviewedTalkComponent } from "./app/home/unreviewedTalk.component";
+import { ProfileComponent } from "./app/profile/profile.component";
 
 declare var angular: angular.IAngularStatic;
 
@@ -15,6 +16,9 @@ platformBrowserDynamic()
       .factory("nameParser", downgradeInjectable(NameParser))
       .directive('unreviewedTalk',downgradeComponent({
         component: unreviewedTalkComponent
+      }))
+      .directive('profile',downgradeComponent({
+        component: ProfileComponent
       }))
     const upgrade = platformRef.injector.get(UpgradeModule) as UpgradeModule;
     upgrade.bootstrap(document.documentElement, ["app"]);
