@@ -7,7 +7,7 @@ webpackJsonp([3],{
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var platform_browser_dynamic_1 = __webpack_require__(77);
-var static_1 = __webpack_require__(53);
+var static_1 = __webpack_require__(28);
 var app_module_1 = __webpack_require__(219);
 var nameParser_service_1 = __webpack_require__(83);
 var unreviewedTalk_component_1 = __webpack_require__(84);
@@ -45,8 +45,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
-var static_1 = __webpack_require__(53);
+var core_1 = __webpack_require__(1);
+var static_1 = __webpack_require__(28);
 var platform_browser_1 = __webpack_require__(13);
 var forms_1 = __webpack_require__(82);
 var http_1 = __webpack_require__(78);
@@ -111,7 +111,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
+var core_1 = __webpack_require__(1);
 var AppComponent = (function () {
     function AppComponent() {
     }
@@ -147,7 +147,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
+var core_1 = __webpack_require__(1);
 var talkDurationPipe = (function () {
     function talkDurationPipe() {
     }
@@ -196,8 +196,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
-var static_1 = __webpack_require__(53);
+var core_1 = __webpack_require__(1);
+var static_1 = __webpack_require__(28);
 var NavComponent = (function (_super) {
     __extends(NavComponent, _super);
     function NavComponent(elementRef, injector) {
@@ -228,7 +228,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
+var core_1 = __webpack_require__(1);
 var NameParser = (function () {
     function NameParser() {
     }
@@ -269,7 +269,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
+var core_1 = __webpack_require__(1);
 var unreviewedTalkComponent = (function () {
     function unreviewedTalkComponent() {
         this.voteYes = new core_1.EventEmitter();
@@ -324,7 +324,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__(2);
+var core_1 = __webpack_require__(1);
 var ProfileComponent = (function () {
     function ProfileComponent($location, currentIdentity, toastr) {
         this.$location = $location;

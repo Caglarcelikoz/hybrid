@@ -856,7 +856,7 @@ angular.module("app").component("tasksList", {
 /***/ 211:
 /***/ (function(module, exports) {
 
-module.exports = "<table class=\"table table-striped table-dark\">\r\n  <thead>\r\n    <tr>\r\n      <th scope=\"col\">#</th>\r\n      <th scope=\"col\">Title</th>\r\n      <th scope=\"col\">Estimated hours</th>\r\n      <th scope=\"col\">Time taken</th>\r\n      <th scope=\"col\">Assigned to</th>\r\n      <th scope=\"col\">Status</th>\r\n    </tr>\r\n  </thead>\r\n  <tbody>\r\n    <tr ng-repeat=\"task in $ctrl.tasks\">\r\n      <th scope=\"row\">{{task.id}}</th>\r\n      <td>{{task.title}}</td>\r\n      <td>{{task.estimated_hours}}</td>\r\n      <td>{{task.time_taken}}</td>\r\n      <td>{{task.assigned_to}}</td>\r\n      <td>{{task.status}}</td>\r\n    </tr>\r\n  </tbody>\r\n</table>\r\n";
+module.exports = "<table class=\"table table-striped table-dark\">\r\n  <thead>\r\n    <tr>\r\n      <th scope=\"col\">#</th>\r\n      <th scope=\"col\">Title</th>\r\n      <th scope=\"col\">Estimated hours</th>\r\n      <th scope=\"col\">Time taken</th>\r\n      <th scope=\"col\">Assigned to</th>\r\n      <th scope=\"col\">Status</th>\r\n    </tr>\r\n  </thead>\r\n  <tbody ng-repeat=\"x in [].constructor(10) track by $index\">\r\n    <tr ng-repeat=\"task in $ctrl.tasks\">\r\n      <th scope=\"row\">{{task.id}}</th>\r\n      <td>{{task.title}}</td>\r\n      <td>{{task.estimated_hours}}</td>\r\n      <td>{{task.time_taken}}</td>\r\n      <td>{{task.assigned_to}}</td>\r\n      <td>{{task.status}}</td>\r\n    </tr>\r\n  </tbody>\r\n</table>\r\n";
 
 /***/ }),
 
