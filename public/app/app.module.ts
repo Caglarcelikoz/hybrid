@@ -10,13 +10,13 @@ import { talkDurationPipe } from "./common/talkDuration.pipe";
 import { ProfileComponent } from "./profile/profile.component";
 import { NavComponent } from "./nav/nav.component";
 
-function getLocation(i: any) {
+export function getLocation(i: any) {
   return i.get("$location");
 }
-function getCurrentIdentity(i: any) {
+export function getCurrentIdentity(i: any) {
   return i.get("currentIdentity");
 }
-function getToastr(i: any) {
+export function getToastr(i: any) {
   return i.get("toastr");
 }
 

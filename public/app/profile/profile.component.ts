@@ -8,7 +8,7 @@ export class ProfileComponent {
     @Inject("$location")
     private $location,
     @Inject("currentIdentity")
-    private currentIdentity,
+    public currentIdentity,
     @Inject("toastr") private toastr
   ) {}
 
