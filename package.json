@@ -7,9 +7,12 @@
     "server": "node ./server/server.js",
     "dev": "nodemon ./server/server.js -w ./server",
     "start": "npm run clean-dev && webpack --config config/webpack.dev.js --watch --profile --progress",
+    "build": "npm run clean-aot && webpack --config config/webpack.prod.js --profile --progress --bail",
     "clean-dev": "rimraf dist/dev/*",
+    "clean-aot": "rimraf dist/aot/*",
     "test": "karma start",
-    "tsc": "tsc -p . -w"
+    "tsc": "tsc -p . -w",
+    "bundle-report": "webpack-bundle-analyzer dist/stats.json"
   },
   "keywords": [],
   "author": "joe eames",
