@@ -3,7 +3,8 @@ const webpack = require("webpack");
 const helpers = require("./helpers");
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+var BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+  .BundleAnalyzerPlugin;
 
 const ENV = (process.env.NODE_ENV = process.env.ENV = "production");
 
@@ -38,17 +39,17 @@ module.exports = {
 
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
-      name: "ng1",
+      name: "ng1"
     }),
 
     new webpack.optimize.UglifyJsPlugin({
-      beautify:false,
+      beautify: false,
       comments: false,
-      compress:{
-          warnings:false
+      compress: {
+        warnings: false
       },
       mangle: false
-  }),
+    }),
 
     new webpack.DefinePlugin({
       "process.env": {
@@ -56,9 +57,8 @@ module.exports = {
       }
     }),
 
-
-    /* new BundleAnalyzerPlugin({
-       analyzerMode: 'static'
-     })*/
+    new BundleAnalyzerPlugin({
+      analyzerMode: "static"
+    })
   ]
 };

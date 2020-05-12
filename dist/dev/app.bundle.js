@@ -59,12 +59,15 @@ var nav_component_1 = __webpack_require__(224);
 function getLocation(i) {
     return i.get("$location");
 }
+exports.getLocation = getLocation;
 function getCurrentIdentity(i) {
     return i.get("currentIdentity");
 }
+exports.getCurrentIdentity = getCurrentIdentity;
 function getToastr(i) {
     return i.get("toastr");
 }
+exports.getToastr = getToastr;
 var AppModule = (function () {
     function AppModule() {
     }

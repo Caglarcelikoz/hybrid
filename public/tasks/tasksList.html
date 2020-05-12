@@ -9,7 +9,7 @@
       <th scope="col">Status</th>
     </tr>
   </thead>
-  <tbody ng-repeat="x in [].constructor(10) track by $index">
+  <tbody>
     <tr ng-repeat="task in $ctrl.tasks">
       <th scope="row">{{task.id}}</th>
       <td>{{task.title}}</td>
