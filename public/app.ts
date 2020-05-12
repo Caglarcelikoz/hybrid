@@ -10,6 +10,9 @@ app.run(function($rootScope, $location) {
   });
 });
 
+angular.element(document).ready(() => {
+  angular.bootstrap(document.body, ["app"]);
+});
 app.config([
   "$locationProvider",
   function($locationProvider) {
